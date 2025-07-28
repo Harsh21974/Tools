@@ -852,27 +852,7 @@
                 : '<i class="fas fa-bars"></i>';
         });
         
-        // Tool tabs functionality
-        const toolTabs = document.querySelectorAll('.tool-tab');
-        const toolContents = document.querySelectorAll('.tool-content');
-        
-        toolTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs and contents
-                toolTabs.forEach(t => t.classList.remove('active'));
-                toolContents.forEach(c => c.classList.remove('active'));
-                
-                // Add active class to clicked tab and corresponding content
-                tab.classList.add('active');
-                const tabId = tab.getAttribute('data-tab');
-                document.getElementById(tabId).classList.add('active');
-                
-                // Reset all upload areas and results
-                resetAllTools();
-            });
-        });
-        
-        // Reset all tools function
+        // Reset all tools
         function resetAllTools() {
             // Reset compress tool
             document.getElementById('compressInput').value = '';
@@ -905,6 +885,26 @@
             document.getElementById('pdf2imgResult').style.display = 'none';
             document.getElementById('pdf2imgPreviews').innerHTML = '';
         }
+        
+        // Tool tabs functionality
+        const toolTabs = document.querySelectorAll('.tool-tab');
+        const toolContents = document.querySelectorAll('.tool-content');
+        
+        toolTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                toolTabs.forEach(t => t.classList.remove('active'));
+                toolContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+                
+                // Reset all upload areas and results
+                resetAllTools();
+            });
+        });
         
         // Initialize PDF.js worker
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.worker.min.js';
