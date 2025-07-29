@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - ToolKit</title>
+    <meta name="description" content="Read our Terms of Service to understand the rules and guidelines for using ToolKit's services.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* All the same CSS as the homepage */
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --success: #4cc9f0;
+            --warning: #f72585;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f7fa;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a.active {
+            color: var(--primary);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .breadcrumb li {
+            margin: 0 5px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Terms Content */
+        .terms-content {
+            padding: 60px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .terms-section {
+            margin-bottom: 40px;
+        }
+
+        .terms-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .terms-section h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            color: var(--dark);
+        }
+
+        .terms-section p {
+            margin-bottom: 15px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .terms-section ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .terms-section li {
+            margin-bottom: 10px;
+            color: var(--gray);
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: var(--gray);
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .footer-social-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 15px 0;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: var(--box-shadow);
+                padding: 20px;
+                transform: translateY(-150%);
+                transition: var(--transition);
+                z-index: 99;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .terms-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .terms-section h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="https://via.placeholder.com/40" alt="ToolKit Logo">
+                <h1>ToolsKit</h1>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html" class="active">Terms</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>/</li>
+                <li>Terms of Service</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Terms Content -->
+    <section class="terms-content">
+        <div class="container">
+            <div class="terms-section">
+                <h2>Terms of Service</h2>
+                <p>Last Updated: June 1, 2023</p>
+                <p>These Terms of Service ("Terms") govern your access to and use of the ToolKit website and services (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h3>1. Acceptance of Terms</h3>
+                <p>By using our Services, you confirm that you accept these Terms and that you agree to comply with them. If you do not agree to these Terms, you must not use our Services.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h3>2. Description of Services</h3>
+                <p>ToolKit provides online tools for processing images and PDF documents. Our Services include but are not limited to:</p>
+                <ul>
+                    <li>Image compression and optimization</li>
+                    <li>Image to PDF conversion</li>
+                    <li>PDF to image conversion</li>
+                    <li>PDF merging and splitting</li>
+                    <li>Other related file processing tools</li>
+                </ul>
+                <p>We reserve the right to modify or discontinue any Service at any time without notice.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h3>3. User Responsibilities</h3>
+                <p>When using our Services, you agree to:</p>
+                <ul>
+                    <li>Use the Services only for lawful purposes</li>
+                    <li>Not upload or process any content that is illegal, harmful, or infringes on others' rights</li>
+                    <li>Not attempt to disrupt or interfere with the Services</li>
+                    <li>Not use automated systems to access our Services without permission</li>
+                </ul>
+            </div>
+            
+            <div class="terms-section">
+                <h3>4. Intellectual Property</h3>
+                <p>All intellectual property rights in the Services, including the website and its content, are owned by or licensed to us. You may not copy, modify, distribute, sell, or lease any part of our Services without our permission.</p>
+                <p>You retain ownership of any content you upload or process through our Services. However, by using our Services, you grant us a limited license to process your files solely for the purpose of providing the Services.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h3>5. Disclaimer of Warranties</h3>
+                <p>Our Services are provided "as is" and "as available" without warranties of any kind, either express or implied. We do not warrant that:</p>
+                <ul>
+                    <li>The Services will be uninterrupted or error-free</li>
+                    <li>The results obtained from using the Services will be accurate or reliable</li>
+                    <li>The quality of any products, services, or information obtained through the Services will meet your expectations</li>
+                </ul>
+            </div>
+            
+            <div class="terms-section">
+                <h3>6. Limitation of Liability</h3>
+                <p>To the maximum extent permitted by law, ToolKit shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:</p>
+                <ul>
+                    <li>Your use or inability to use the Services</li>
+                    <li>Any unauthorized access to or use of our servers and/or any personal information stored therein</li>
+                    <li>Any interruption or cessation of transmission to or from our Services</li>
+                    <li>Any bugs, viruses, or similar that may be transmitted through our Services</li>
+                </ul>
+            </div>
+            
+            <div class="terms-section">
+                <h3>7. Changes to Terms</h3>
+                <p>We may revise these Terms at any time by posting the updated version on this page. Your continued use of the Services after any changes constitutes your acceptance of the new Terms.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h3>8. Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h3>9. Contact Information</h3>
+                <p>If you have any questions about these Terms, please contact us at <a href="mailto:support@toolkit.com">support@toolkit.com</a>.</p>
+            </div>
+            
+            <p class="last-updated">These Terms were last updated on July 1, 2025.</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ToolKit</h3>
+                    <p>Free online tools for image and PDF processing. Fast, secure, and easy to use.</p>
+                    <div class="footer-social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li><a href="img-tools.html">Image Compressor</a></li>
+                        <li><a href="img-tools.html">PDF Converter</a></li>
+                        <li><a href="img-tools.html">Image to PDF</a></li>
+                        <li><a href="img-tools.html">PDF Merger</a></li>
+                        <li><a href="img-tools.html">All Tools</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@toolkit.com</li>
+                        <li><i class="fas fa-phone"></i>Available Online</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Surat, Gujarat, India</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> ToolsKit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+    </script>
+</body>
+</html>
