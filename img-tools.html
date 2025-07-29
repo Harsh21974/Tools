@@ -1303,7 +1303,7 @@
         function setupDragAndDrop(uploadArea, callback, accept, multiple = false) {
             uploadArea.addEventListener('dragover', (e) => {
                 e.preventDefault();
-                uploadArea.style.borderColor = var(--primary-color);
+                uploadArea.style.borderColor = 'var(--primary-color)';
                 uploadArea.style.backgroundColor = 'rgba(67, 97, 238, 0.05)';
             });
             
